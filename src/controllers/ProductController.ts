@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 // import statusCodes from '../statusCodes';
 import ProductService from '../services/ProductService';
 
-class ProductController {
+export default class ProductController {
   productService: ProductService;
 
   constructor(productService = new ProductService()) {
@@ -22,5 +22,3 @@ class ProductController {
     res.status(200).json(products);
   }
 }
-
-export default ProductController;
